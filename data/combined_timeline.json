@@ -1,0 +1,370 @@
+{
+  "_id": "9210e60c-b869-417b-a336-c6bff56162d7",
+  "TimelineUser": "13cf1db1-2b0f-46bc-b7c4-4498ea1f3e1e",
+  "TimeDue": {
+    "$date": 1441483225520
+  },
+  "Title": "Pork Tenderloin",
+  "Body": "Bedford Blues & BBQ Festival People Choice",
+  "TimelineEvents": [
+    {
+      "Title": "Buy 12 pork tenderloins",
+      "TimeOffset": -3,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Buy ingredients for rub,  injections and glazes",
+      "TimeOffset": -2,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Make rubs,  injections and glazes",
+      "TimeOffset": -2,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Trim and inject tenderloins",
+      "TimeOffset": -1,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Start smoker",
+      "TimeOffset": -9,
+      "TimeOffsetType": "HOURS",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull tenderloins and apply rub",
+      "TimeOffset": -450,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Put tenderloins on smoker",
+      "TimeOffset": -7,
+      "TimeOffsetType": "HOURS",
+      "Reminder": true
+    },
+    {
+      "Title": "Spritz tenderloins",
+      "TimeOffset": -6,
+      "TimeOffsetType": "HOURS",
+      "Reminder": true
+    },
+    {
+      "Title": "Spritz tenderloins",
+      "TimeOffset": -5,
+      "TimeOffsetType": "HOURS",
+      "Reminder": true
+    },
+    {
+      "Title": "Wrap tenderloins",
+      "TimeOffset": -240,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check tenderloin temp and pull at 165 degrees",
+      "TimeOffset": -210,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check tenderloin temp and pull at 165 degrees",
+      "TimeOffset": -180,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check tenderloin temp and pull at 165 degrees",
+      "TimeOffset": -150,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull tenderloins and let rest in hot box",
+      "TimeOffset": -120,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Glaze tenderloins and return to smoker",
+      "TimeOffset": -45,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull and slice tenderloins",
+      "TimeOffset": -10,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    }
+  ]
+}
+{
+  "_id": "a11c6e4b-9a85-499a-a64f-43fd61a19020",
+  "TimelineUser": "13cf1db1-2b0f-46bc-b7c4-4498ea1f3e1e",
+  "TimeDue": {
+    "$date": 1441564204429
+  },
+  "Title": "Bedford KCBS",
+  "Body": "Bedford Blues & BBQ Festival Timeline",
+  "TimelineEvents": [
+    {
+      "Title": "Buy meat for competition - 2 briskets,  4 pork shoulders,  6 racks spare ribs,  24 thighs",
+      "TimeOffset": -3,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Buy ingredients for rubs,  injections,  brine and glazes",
+      "TimeOffset": -3,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Make rubs,  injections,  brines and glazes",
+      "TimeOffset": -3,
+      "TimeOffsetType": "DAYS",
+      "Reminder": true
+    },
+    {
+      "Title": "Site setup",
+      "TimeOffset": -2970,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Trim and inject briskets",
+      "TimeOffset": -1170,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Cooks Meeting",
+      "TimeOffset": -1145,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Trim and inject pork shoulders",
+      "TimeOffset": -1140,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Trim and brine chicken",
+      "TimeOffset": -1110,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Trim ribs",
+      "TimeOffset": -1080,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Start smoker",
+      "TimeOffset": -870,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull brisket and pork shoulders,  apply rub",
+      "TimeOffset": -810,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Put brisket and pork shoulders on smoker",
+      "TimeOffset": -750,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Rotate brisket and pork shoulders",
+      "TimeOffset": -600,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Build blind boxes",
+      "TimeOffset": -480,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Wrap brisket and pork shoulder",
+      "TimeOffset": -450,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull ribs from cooler and trim",
+      "TimeOffset": -450,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Apply rub to ribs",
+      "TimeOffset": -420,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Put ribs on smoker",
+      "TimeOffset": -390,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull chicken from cooler",
+      "TimeOffset": -330,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Spritz ribs",
+      "TimeOffset": -330,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Prep chicken",
+      "TimeOffset": -300,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Spritz ribs",
+      "TimeOffset": -270,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check brisket and pork temps pull at 195 degrees",
+      "TimeOffset": -270,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Put chicken on smoker",
+      "TimeOffset": -240,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check brisket and pork temps pull at 195 degress",
+      "TimeOffset": -240,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Wrap ribs",
+      "TimeOffset": -210,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check brisket and pork temps pull at 195 degress",
+      "TimeOffset": -210,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check ribs and pull if done",
+      "TimeOffset": -150,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Glaze chicken",
+      "TimeOffset": -120,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Check ribs and pull if done",
+      "TimeOffset": -120,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Glaze ribs and return to smoker",
+      "TimeOffset": -105,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Remove chicken and build blind box",
+      "TimeOffset": -100,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Glaze pork and return to smoker",
+      "TimeOffset": -95,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Turn in chicken",
+      "TimeOffset": -90,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Separate point from flat and cut burnt ends",
+      "TimeOffset": -85,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Remove ribs from smoker and build blind box",
+      "TimeOffset": -70,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Turn in ribs",
+      "TimeOffset": -60,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Remove pork from smoker and build blind box",
+      "TimeOffset": -40,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Turn in pork box",
+      "TimeOffset": -30,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Pull burnt ends from smoker and check for tenderness",
+      "TimeOffset": -25,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Build brisket blind box",
+      "TimeOffset": -10,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "Turn in brisket box",
+      "TimeOffset": 0,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    }
+  ]
+}
