@@ -2,25 +2,25 @@ angular.module('cookTimeline').factory("timelineManager", function ($http, $q, l
     var timelineData = null;
 
     var getTimeline = function () {
-        return timelineData;
+        return localStorageService.get('current:timeline');
     };
 
-    var updateTimeline = function () {
+    var updateTimeline = function (timelineData) {
         localStorageService.set('current:timeline', timelineData);
     };
 
     var retrieveTimeline = function () {
-        if (!timelineData) {
+        var data = localStorageService.get('current:timeline');
+        if (!data) {
             return $http.get('data/combined_timeline.json').then(function (result) {
-                timelineData = result.data;
-                updateTimeline();
-                return timelineData;
+                updateTimeline(result.data);
+                return result.data;
             }, function (result) {
-                timelineData = {};
-                return timelineData;
+                updateTimeline({});
+                return {};
             })
         } else {
-            return $q.when(timelineData);
+            return $q.when(data);
         }
     };
 
