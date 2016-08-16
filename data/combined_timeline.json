@@ -3,61 +3,61 @@
   "Body": "KCBS Competition Timeline",
   "TimelineEvents": [
     {
-      "Title": "Site setup",
+      "Title": "SITE SETUP",
       "TimeOffset": -2970,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Meat Inspection",
+      "Title": "MEAT INSPECTION",
       "TimeOffset": -2970,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Trim and inject briskets",
-      "TimeOffset": -1170,
+      "Title": "TRIM AND INJECT BRISKETS",
+      "TimeOffset": -2910,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Cooks Meeting",
+      "Title": "TRIM AND INJECT PORK SHOULDERS",
+      "TimeOffset": -2880,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "TRIM AND BRINE CHICKEN",
+      "TimeOffset": -2850,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "TRIM RIBS",
+      "TimeOffset": -2820,
+      "TimeOffsetType": "MINUTES",
+      "Reminder": true
+    },
+    {
+      "Title": "COOKS MEETING",
       "TimeOffset": -1145,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Trim and inject pork shoulders",
-      "TimeOffset": -1140,
-      "TimeOffsetType": "MINUTES",
-      "Reminder": true
-    },
-    {
-      "Title": "Trim and brine chicken",
-      "TimeOffset": -1110,
-      "TimeOffsetType": "MINUTES",
-      "Reminder": true
-    },
-    {
-      "Title": "Trim ribs",
-      "TimeOffset": -1080,
-      "TimeOffsetType": "MINUTES",
-      "Reminder": true
-    },
-    {
-      "Title": "Start smoker",
+      "Title": "START SMOKER",
       "TimeOffset": -870,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Pull brisket and pork shoulders,  apply rub",
+      "Title": "PULL BRISKET AND PORK SHOULDERS, APPLY RUB",
       "TimeOffset": -810,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Put brisket and pork shoulders on smoker",
+      "Title": "PUT BRISKET AND PORK SHOULDERS ON SMOKER",
       "TimeOffset": -750,
       "TimeOffsetType": "MINUTES",
       "Reminder": true

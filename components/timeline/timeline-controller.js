@@ -2,6 +2,15 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
     $scope.timelineData = {};
     $scope.timedue = new moment();
     $scope.upcomingEvents = [];
+    $scope.playing = false;
+    $scope.sound = null;
+    $scope.id = null;
+
+    $scope.acknowledge = function () {
+        $scope.sound.stop($scope.id);
+        $scope.playing = false;
+        $scope.id = null;
+    };
 
     $scope.formatDateTime = function (eventTime) {
         return eventTime.calendar();
@@ -49,22 +58,28 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
             if ($scope.upcomingEvents && $scope.upcomingEvents[0]) {
                 due = new moment($scope.upcomingEvents[0].TimeDue);
                 var till = due.diff(now, 'seconds');
-                if (till < 30) {
-                    var sound = new Howl({
-                        src: ['audio/tng_red_alert2.mp3']
+                if (till < 30 && !$scope.playing) {
+                    $scope.playing = true;
+                    $scope.sound = new Howl({
+                        src: ['audio/tng_red_alert2.mp3'],
+                        autoplay: true,
+                        loop: true
                     });
 
-                    sound.play();
+                    $scope.id = sound.play();
                 }
             }
         }
     };
 
     $scope.init = function () {
+        $scope.timelineData = timelineManager.getTimeline();
+        $scope.processTimeLine();
+
         $interval(function () {
             $scope.timelineData = timelineManager.getTimeline();
             $scope.processTimeLine();
-        }, 1000);
+        }, 10000);
     };
 
     $scope.init();
