@@ -1,243 +1,244 @@
 {
   "Title": "KCBS Competition Timeline",
   "Body": "KCBS Competition Timeline",
+  "TimeDue": "2016-08-16T04:30:00.000Z",
   "TimelineEvents": [
     {
-      "Title": "SITE SETUP",
+      "Title": "site setup",
       "TimeOffset": -2970,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "MEAT INSPECTION",
+      "Title": "meat inspection",
       "TimeOffset": -2970,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "TRIM AND INJECT BRISKETS",
+      "Title": "trim and inject briskets",
       "TimeOffset": -2910,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "TRIM AND INJECT PORK SHOULDERS",
+      "Title": "trim and inject pork shoulders",
       "TimeOffset": -2880,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "TRIM AND BRINE CHICKEN",
+      "Title": "trim and brine chicken",
       "TimeOffset": -2850,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "TRIM RIBS",
+      "Title": "trim ribs",
       "TimeOffset": -2820,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "COOKS MEETING",
+      "Title": "cooks meeting",
       "TimeOffset": -1145,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "START SMOKER",
+      "Title": "start smoker",
       "TimeOffset": -870,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "PULL BRISKET AND PORK SHOULDERS, APPLY RUB",
+      "Title": "pull brisket and pork shoulders, apply rub",
       "TimeOffset": -810,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "PUT BRISKET AND PORK SHOULDERS ON SMOKER",
+      "Title": "put brisket and pork shoulders on smoker",
       "TimeOffset": -750,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Rotate brisket and pork shoulders",
+      "Title": "rotate brisket and pork shoulders",
       "TimeOffset": -600,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Build blind boxes",
+      "Title": "build blind boxes",
       "TimeOffset": -480,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Wrap brisket and pork shoulder",
+      "Title": "wrap brisket and pork shoulder",
       "TimeOffset": -450,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Pull ribs from cooler and trim",
+      "Title": "pull ribs from cooler and trim",
       "TimeOffset": -450,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Apply rub to ribs",
+      "Title": "apply rub to ribs",
       "TimeOffset": -420,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Put ribs on smoker",
+      "Title": "put ribs on smoker",
       "TimeOffset": -390,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Pull chicken from cooler",
+      "Title": "pull chicken from cooler",
       "TimeOffset": -330,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Spritz ribs",
+      "Title": "spritz ribs",
       "TimeOffset": -330,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Prep chicken",
+      "Title": "prep chicken",
       "TimeOffset": -300,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Spritz ribs",
+      "Title": "spritz ribs",
       "TimeOffset": -270,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Check brisket and pork temps pull at 195 degrees",
+      "Title": "check brisket and pork temps pull at 195 degrees",
       "TimeOffset": -270,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Put chicken on smoker",
+      "Title": "put chicken on smoker",
       "TimeOffset": -240,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Check brisket and pork temps pull at 195 degrees",
+      "Title": "check brisket and pork temps pull at 195 degrees",
       "TimeOffset": -240,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Wrap ribs",
+      "Title": "wrap ribs",
       "TimeOffset": -210,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Check brisket and pork temps pull at 195 degrees",
+      "Title": "check brisket and pork temps pull at 195 degrees",
       "TimeOffset": -210,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Check ribs and pull if done",
+      "Title": "check ribs and pull if done",
       "TimeOffset": -150,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Glaze chicken",
+      "Title": "glaze chicken",
       "TimeOffset": -120,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Check ribs and pull if done",
+      "Title": "check ribs and pull if done",
       "TimeOffset": -120,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Glaze ribs and return to smoker",
+      "Title": "glaze ribs and return to smoker",
       "TimeOffset": -105,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Remove chicken and build blind box",
+      "Title": "remove chicken and build blind box",
       "TimeOffset": -100,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Glaze pork and return to smoker",
+      "Title": "glaze pork and return to smoker",
       "TimeOffset": -95,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Turn in chicken",
+      "Title": "turn in chicken",
       "TimeOffset": -90,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Separate point from flat and cut burnt ends",
+      "Title": "separate point from flat and cut burnt ends",
       "TimeOffset": -85,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Remove ribs from smoker and build blind box",
+      "Title": "remove ribs from smoker and build blind box",
       "TimeOffset": -70,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Turn in ribs",
+      "Title": "turn in ribs",
       "TimeOffset": -60,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Remove pork from smoker and build blind box",
+      "Title": "remove pork from smoker and build blind box",
       "TimeOffset": -40,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Turn in pork box",
+      "Title": "turn in pork box",
       "TimeOffset": -30,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Pull burnt ends from smoker and check for tenderness",
+      "Title": "pull burnt ends from smoker and check for tenderness",
       "TimeOffset": -25,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Build brisket blind box",
+      "Title": "build brisket blind box",
       "TimeOffset": -10,
       "TimeOffsetType": "MINUTES",
       "Reminder": true
     },
     {
-      "Title": "Turn in brisket box",
+      "Title": "turn in brisket box",
       "TimeOffset": 0,
       "TimeOffsetType": "MINUTES",
       "Reminder": true

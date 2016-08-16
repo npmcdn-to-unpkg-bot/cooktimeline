@@ -5,6 +5,7 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
     $scope.playing = false;
     $scope.sound = null;
     $scope.id = null;
+    $scope.displayEditFields = false;
 
     $scope.acknowledge = function () {
         $scope.sound.stop($scope.id);
@@ -20,17 +21,29 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
         return eventTime.fromNow();
     };
 
+    $scope.soundIsPlaying = function () {
+        if ($scope.playing) {
+            return 'btn-success';
+        }
+
+        return 'btn-default disabled';
+    };
+
     $scope.colorize = function (eventTime) {
         var now = new moment(new Date());
         var due = new moment(eventTime);
         var till = due.diff(now, 'm');
         if (till < 10) {
-            return 'timeline-within10';
+            return 'bg-danger';
         }
         if (till < 60) {
-            return 'timeline-within60';
+            return 'bg-warning';
         }
-        return 'timeline-greaterThan60';
+        return 'bg-success';
+    };
+
+    $scope.editItem = function () {
+        $scope.displayEditFields = !$scope.displayEditFields;
     };
 
     $scope.processTimeLine = function () {
@@ -48,6 +61,11 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
                 }
             });
 
+            var events = _.sortBy($scope.timelineData.TimelineEvents, function (event) {
+                return event.TimeDue;
+            });
+            $scope.timelineData.TimelineEvents = events;
+
             $scope.timelineData.TimeDue = due.toDate();
             timelineManager.updateTimeline();
 
@@ -58,15 +76,14 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
             if ($scope.upcomingEvents && $scope.upcomingEvents[0]) {
                 due = new moment($scope.upcomingEvents[0].TimeDue);
                 var till = due.diff(now, 'seconds');
-                if (till < 30 && !$scope.playing) {
+                if (till <= 11 && !$scope.playing && $scope.upcomingEvents[0].Reminder) {
                     $scope.playing = true;
                     $scope.sound = new Howl({
                         src: ['audio/tng_red_alert2.mp3'],
-                        autoplay: true,
                         loop: true
                     });
 
-                    $scope.id = sound.play();
+                    $scope.id = $scope.sound.play();
                 }
             }
         }
