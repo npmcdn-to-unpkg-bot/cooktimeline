@@ -1,6 +1,20 @@
 <div class="container-fluid" ng-controller="mainController">
-    <div class="row">
+    <div class="col-md-8 col-md-offset-2">
         <h3>{{timelineData.Title}}</h3>
+    </div>
+    <div class="col-md-offset-2 col-md-8">
+        &nbsp;
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="form-inline">
+            <label for="finalTurnInTime">Final Turn In Time</label><input id="finalTurnInTime" type="datetime-local"
+                                                                          ng-model="timelineData.TimeDue"/>
+        </div>
+    </div>
+    <div class="col-md-offset-2 col-md-8">
+        &nbsp;
+    </div>
+    <div class="row">
         <div ng-include="'components/timeline/timeline-partial.html'"></div>
     </div>
 </div>

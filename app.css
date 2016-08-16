@@ -135,6 +135,8 @@
 .timeline-title {
     margin-top: 0;
     color: inherit;
+    font-variant: small-caps;
+    text-rendering: auto;
 }
 
 .timeline-body > p,
@@ -144,6 +146,18 @@
 
 .timeline-body > p + p {
     margin-top: 5px;
+}
+
+.timeline-within10 {
+    background-color: #d9534f !important;
+}
+
+.timeline-within60 {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-greaterThan60 {
+    background-color: #3f903f !important;
 }
 
 @media (max-width: 767px) {

@@ -3,18 +3,17 @@
         <h1 id="timeline">Timeline</h1>
     </div>
     <ul class="timeline">
-        <li ng-repeat="item in timelineData.TimelineEvents">
+        <li ng-repeat="item in upcomingEvents">
             <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
+            <div class="timeline-panel" ng-class="colorize(item.TimeDue)">
                 <div class="timeline-heading">
-                    <h4 class="timeline-title">{{item.TimeDue}}</h4>
+                    <h4 class="timeline-title">{{formatDuration(item.TimeDue)}} {{item.Title}}</h4>
                     <p>
-                        <small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{item.TimeDue}}
-                        </small>
+                        <i class="glyphicon glyphicon-time"></i> {{formatDateTime(item.TimeDue)}}
                     </p>
                 </div>
                 <div class="timeline-body">
-                    <p>{{item.Title}}</p>
+                    <p>&nbsp;</p>
                 </div>
             </div>
         </li>
