@@ -1,10 +1,16 @@
 angular.module('cookTimeline').controller('mainController', function ($scope, $window, $location, timelineManager, dropboxManager) {
-    $scope.timelineData = {};
+    $scope.timelineData = null;
     $scope.timedue = new moment();
     $scope.showLogo = true;
 
     $scope.toggleLogo = function () {
         $scope.showLogo = !$scope.showLogo;
+    };
+
+    $scope.updateTimeline = function () {
+        if ($scope.timelineData) {
+            timelineManager.updateTimeline($scope.timelineData);
+        }
     };
 
     $scope.getAccessTokenFromUrl = function () {

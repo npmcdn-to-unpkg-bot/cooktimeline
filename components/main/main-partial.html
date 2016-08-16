@@ -18,7 +18,7 @@
                     <div class="form-group">
                         <label for="finalTurnInTime">Final Turn In Time</label>
                         <input class="form-control" id="finalTurnInTime" type="datetime-local"
-                               ng-model="timelineData.TimeDue"/>
+                               ng-model="timelineData.TimeDue" ng-change="updateTimeline()"/>
                     </div>
                     <div>&nbsp;</div>
                 </form>

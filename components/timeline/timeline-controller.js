@@ -47,7 +47,7 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
     };
 
     $scope.processTimeLine = function () {
-        if ($scope.timelineData.TimeDue) {
+        if ($scope.timelineData && $scope.timelineData.TimeDue) {
             var now = new moment(new Date());
             var due = new moment($scope.timelineData.TimeDue);
             _.each($scope.timelineData.TimelineEvents, function (event) {
@@ -67,7 +67,7 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
             $scope.timelineData.TimelineEvents = events;
 
             $scope.timelineData.TimeDue = due.toDate();
-            timelineManager.updateTimeline();
+            timelineManager.updateTimeline($scope.timelineData);
 
             $scope.upcomingEvents = _.filter($scope.timelineData.TimelineEvents, function (event) {
                 return event.TimeDue >= now && event.TimeDue <= due;
