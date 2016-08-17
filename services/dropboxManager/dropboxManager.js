@@ -39,7 +39,7 @@ angular.module('cookTimeline').factory("dropboxManager", function ($q, $http, lo
 
     var uploadTimeline = function (timeline) {
         var deferred = $q.defer();
-        dropBox.filesUpload({path: '/' + timeline.Title, contents: timeline})
+        dropBox.filesUpload({path: '/' + timeline.Title, contents: angular.toJson(timeline)})
             .then(function (response) {
                 deferred.resolve(response);
             })

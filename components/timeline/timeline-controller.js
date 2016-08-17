@@ -6,15 +6,13 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
     $scope.sound = null;
     $scope.id = null;
     $scope.displayEditFields = false;
+    $scope.displayAddEvent = false;
+    $scope.newItem = {Title: "new event", TimeOffset: -30, TimeOffsetType: "MINUTES", Reminder: true};
 
     $scope.acknowledge = function () {
         $scope.sound.stop($scope.id);
         $scope.playing = false;
         $scope.id = null;
-    };
-
-    $scope.updateTimeline = function () {
-        timelineManager.updateTimeline($scope.timelineData);
     };
 
     $scope.formatDateTime = function (eventTime) {
@@ -46,11 +44,38 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
         return 'bg-success';
     };
 
+    $scope.addNewEvent = function () {
+        $scope.displayAddEvent = true;
+        $scope.newItem = {Title: "new event", TimeOffset: -30, TimeOffsetType: "MINUTES", Reminder: true};
+    };
+
+    $scope.updateTimeline = function () {
+        var events = _.sortBy($scope.timelineData.TimelineEvents, function (event) {
+            return event.TimeDue;
+        });
+        $scope.timelineData.TimelineEvents = events;
+        timelineManager.updateTimeline($scope.timelineData);
+    };
+
+    $scope.saveNewEvent = function () {
+        $scope.displayAddEvent = false;
+        $scope.timelineData.TimelineEvents.push($scope.newItem);
+        $scope.updateTimeline();
+    };
+
     $scope.editItem = function () {
         $scope.displayEditFields = !$scope.displayEditFields;
+        if (!$scope.displayEditFields) {
+            $scope.updateTimeline();
+        }
     };
 
     $scope.processTimeLine = function () {
+        // dont process timeline if editing it
+        if ($scope.displayEditFields) {
+            return;
+        }
+
         if ($scope.timelineData && $scope.timelineData.TimeDue) {
             var now = new moment(new Date());
             var due = new moment($scope.timelineData.TimeDue, "YYYY-MM-DDTHH:mm:ss.SSSSZ");
@@ -65,12 +90,7 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
                 }
             });
 
-            var events = _.sortBy($scope.timelineData.TimelineEvents, function (event) {
-                return event.TimeDue;
-            });
-            $scope.timelineData.TimelineEvents = events;
-
-            timelineManager.updateTimeline($scope.timelineData);
+            $scope.updateTimeline();
 
             $scope.upcomingEvents = _.filter($scope.timelineData.TimelineEvents, function (event) {
                 return event.TimeDue >= now && event.TimeDue <= due;
@@ -97,6 +117,7 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
         $scope.processTimeLine();
 
         $interval(function () {
+            $scope.timelineData = timelineManager.getTimeline();
             $scope.processTimeLine();
         }, 10000);
     };

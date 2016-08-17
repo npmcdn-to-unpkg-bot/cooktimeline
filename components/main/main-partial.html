@@ -22,7 +22,8 @@
             </div>
             <div>
                 <p ng-repeat="file in files">
-                    <a ng-click="downloadTimeline(file.id)">{{file.path_lower}}</a>
+                    {{file.path_lower}} <a ng-click="downloadTimeline(file.id)"><i
+                        class="glyphicon glyphicon-download"></i></a>
                 </p>
             </div>
         </div>
