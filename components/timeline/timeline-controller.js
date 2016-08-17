@@ -13,6 +13,10 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
         $scope.id = null;
     };
 
+    $scope.updateTimeline = function () {
+        timelineManager.updateTimeline($scope.timelineData);
+    };
+
     $scope.formatDateTime = function (eventTime) {
         return eventTime.calendar();
     };
@@ -49,7 +53,7 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
     $scope.processTimeLine = function () {
         if ($scope.timelineData && $scope.timelineData.TimeDue) {
             var now = new moment(new Date());
-            var due = new moment($scope.timelineData.TimeDue);
+            var due = new moment($scope.timelineData.TimeDue, "YYYY-MM-DDTHH:mm:ss.SSSSZ");
             _.each($scope.timelineData.TimelineEvents, function (event) {
                 switch (event.TimeOffsetType) {
                     case "MINUTES":
@@ -66,7 +70,6 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
             });
             $scope.timelineData.TimelineEvents = events;
 
-            $scope.timelineData.TimeDue = due.toDate();
             timelineManager.updateTimeline($scope.timelineData);
 
             $scope.upcomingEvents = _.filter($scope.timelineData.TimelineEvents, function (event) {
@@ -94,7 +97,6 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
         $scope.processTimeLine();
 
         $interval(function () {
-            $scope.timelineData = timelineManager.getTimeline();
             $scope.processTimeLine();
         }, 10000);
     };

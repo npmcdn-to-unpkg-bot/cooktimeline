@@ -1,4 +1,4 @@
-angular.module('cookTimeline').factory("dropboxManager", function ($q, localStorageService) {
+angular.module('cookTimeline').factory("dropboxManager", function ($q, $http, localStorageService) {
     var dropBox = null;
 
     var authenticate = function () {
@@ -14,13 +14,27 @@ angular.module('cookTimeline').factory("dropboxManager", function ($q, localStor
         var deferred = $q.defer();
         dropBox.filesListFolder({path: ''})
             .then(function (response) {
-                deferred.resolve(response);
+                deferred.resolve(response.entries);
             })
             .catch(function (error) {
                 deferred.reject(error);
             });
 
         return deferred.promise;
+    };
+
+    var getSharingFileLink = function (fileName, accessToken) {
+
+        var req = {
+            method: 'POST',
+            url: 'https://content.dropboxapi.com/2/files/download',
+            headers: {
+                'Authorization': 'Bearer ' + accessToken,
+                'Dropbox-API-Arg': '{"path": "' + fileName + '"}'
+            }
+        };
+
+        return $http(req);
     };
 
     var uploadTimeline = function (timeline) {
@@ -39,6 +53,7 @@ angular.module('cookTimeline').factory("dropboxManager", function ($q, localStor
         authenticate: authenticate,
         setAccessToken: setAccessToken,
         getFileListFromDropBox: getFileListFromDropBox,
+        getSharingFileLink: getSharingFileLink,
         uploadTimeline: uploadTimeline
     };
 

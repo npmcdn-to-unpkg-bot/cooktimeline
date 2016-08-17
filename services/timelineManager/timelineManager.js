@@ -6,6 +6,9 @@ angular.module('cookTimeline').factory("timelineManager", function ($http, $q, l
     };
 
     var updateTimeline = function (timelineData) {
+        var due = new moment(timelineData.TimeDue, "YYYY-MM-DDTHH:mm:ss.SSSSZ");
+        timelineData.TimeDue = due.toDate();
+
         localStorageService.set('current:timeline', timelineData);
     };
 

@@ -2,6 +2,7 @@ angular.module('cookTimeline').controller('mainController', function ($scope, $w
     $scope.timelineData = null;
     $scope.timedue = new moment();
     $scope.showLogo = true;
+    $scope.files = [];
 
     $scope.toggleLogo = function () {
         $scope.showLogo = !$scope.showLogo;
@@ -35,7 +36,17 @@ angular.module('cookTimeline').controller('mainController', function ($scope, $w
         } else {
             dropboxManager.setAccessToken(accessToken);
             dropboxManager.getFileListFromDropBox().then(function (files) {
-                console.log(files);
+                $scope.files = files;
+            });
+        }
+    };
+
+    $scope.downloadTimeline = function (id) {
+        var accessToken = $scope.getAccessTokenFromUrl();
+        if (accessToken) {
+            dropboxManager.getSharingFileLink(id, accessToken).then(function (result) {
+                $scope.timelineData = result.data;
+                $scope.updateTimeline();
             });
         }
     };

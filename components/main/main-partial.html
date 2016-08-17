@@ -9,19 +9,21 @@
                     <img src="images/Otaku-Avatar_200.jpg">
                     <h3>Otaku Smoke & Brew Cook Timeline</h3>
                 </div>
-                <div class="pull-right">
-                    <button id="loadFiles" class="btn btn-danger" ng-click="loadFiles()">Load Files</button>
-                    <button id="loadFiles" class="btn btn-danger" ng-click="saveTimeline()">Save</button>
-                </div>
-                <form class="bg-info navbar-form">
-                    <div>&nbsp;</div>
-                    <div class="form-group">
-                        <label for="finalTurnInTime">Final Turn In Time</label>
-                        <input class="form-control" id="finalTurnInTime" type="datetime-local"
-                               ng-model="timelineData.TimeDue" ng-change="updateTimeline()"/>
-                    </div>
-                    <div>&nbsp;</div>
-                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="well">
+            <div class="pull-right">
+                <p>&nbsp;</p>
+                <button id="loadFiles" class="btn btn-danger" ng-click="loadFiles()">Load File</button>
+                <button id="loadFiles" class="btn btn-danger" ng-click="saveTimeline()">Save</button>
+                <p>&nbsp;</p>
+            </div>
+            <div>
+                <p ng-repeat="file in files">
+                    <a ng-click="downloadTimeline(file.id)">{{file.path_lower}}</a>
+                </p>
             </div>
         </div>
     </div>
