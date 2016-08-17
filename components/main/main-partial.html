@@ -9,22 +9,17 @@
                     <img src="images/Otaku-Avatar_200.jpg">
                     <h3>Otaku Smoke & Brew Cook Timeline</h3>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="well">
-            <div class="pull-right">
-                <p>&nbsp;</p>
-                <button id="loadFiles" class="btn btn-danger" ng-click="loadFiles()">Load File</button>
-                <button id="loadFiles" class="btn btn-danger" ng-click="saveTimeline()">Save</button>
-                <p>&nbsp;</p>
-            </div>
-            <div>
-                <p ng-repeat="file in files">
-                    {{file.path_lower}} <a ng-click="downloadTimeline(file.id)"><i
-                        class="glyphicon glyphicon-download"></i></a>
-                </p>
+                <div>
+                    <div ng-repeat="file in files">
+                        {{file.path_lower}} <a ng-click="downloadTimeline(file.id)"><i
+                            class="glyphicon glyphicon-download"></i></a>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button id="loadFiles" class="btn btn-danger" ng-click="loadFiles()">Load File</button>
+                    <button id="loadFiles" class="btn btn-danger" ng-click="saveTimeline()">Save</button>
+                </div>
+                <div>&nbsp;</div>
             </div>
         </div>
     </div>

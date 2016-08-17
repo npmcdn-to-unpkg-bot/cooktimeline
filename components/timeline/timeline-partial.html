@@ -1,7 +1,7 @@
 <div class="container" ng-controller="timelineController">
-    <div class="page-header">
-        <div>&nbsp;</div>
-        <form class="bg-info form-horizontal">
+    <div class="bg-info well-lg">
+        <form class="form-horizontal">
+            <div>&nbsp;</div>
             <div class="form-group">
                 <input class="form-control" id="timelineTitlw" class="input-lg" type="text"
                        ng-model="timelineData.Title"
@@ -12,8 +12,8 @@
                 <input class="form-control" id="finalTurnInTime" type="datetime-local" ng-model="timelineData.TimeDue"
                        ng-change="updateTimeline()"/>
             </div>
+            <div>&nbsp;</div>
         </form>
-        <div>&nbsp;</div>
     </div>
     <div class="page-header">
         <div class="btn btn-lg btn-block" ng-class="soundIsPlaying()" ng-click="acknowledge()">Acknowledge</div>
