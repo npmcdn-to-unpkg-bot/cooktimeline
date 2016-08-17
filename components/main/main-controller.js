@@ -1,23 +1,13 @@
-angular.module('cookTimeline').controller('mainController', function ($scope, $window, $location, timelineManager, dropboxManager) {
+angular.module('cookTimeline').controller('mainController', function ($scope, $window, $location, $rootScope, timelineManager, dropboxManager) {
     $scope.timelineData = null;
     $scope.timedue = new moment();
     $scope.showLogo = true;
     $scope.files = [];
 
-    $scope.toggleLogo = function () {
-        $scope.showLogo = !$scope.showLogo;
-    };
-
-    $scope.updateTimeline = function () {
-        if ($scope.timelineData) {
-            timelineManager.updateTimeline($scope.timelineData);
-        }
-    };
-
     $scope.getAccessTokenFromUrl = function () {
         var accessToken = $location.path();
         var start = accessToken.indexOf('access_token=');
-        if (start) {
+        if (start >= 0) {
             accessToken = accessToken.substring(start + 13);
             var end = accessToken.indexOf('&');
             if (end) {
@@ -28,12 +18,32 @@ angular.module('cookTimeline').controller('mainController', function ($scope, $w
         return undefined;
     };
 
+    $scope.isAuthenticated = function () {
+        if ($scope.getAccessTokenFromUrl()) {
+            return true;
+        }
+        return false;
+    };
+
+    $scope.authenticateWithDropbox = function () {
+        var url = dropboxManager.authenticate();
+        $window.location.href = url;
+    };
+
+    $scope.toggleLogo = function () {
+        $scope.showLogo = !$scope.showLogo;
+    };
+
+    $scope.updateTimeline = function () {
+        if ($scope.timelineData) {
+            timelineManager.updateTimeline($scope.timelineData);
+            $rootScope.$broadcast('cooktimeline:filedownloaded');
+        }
+    };
+
     $scope.loadFiles = function () {
         var accessToken = $scope.getAccessTokenFromUrl();
-        if (!accessToken) {
-            var url = dropboxManager.authenticate();
-            $window.location.href = url;
-        } else {
+        if (accessToken) {
             dropboxManager.setAccessToken(accessToken);
             dropboxManager.getFileListFromDropBox().then(function (files) {
                 $scope.files = files;
@@ -51,30 +61,11 @@ angular.module('cookTimeline').controller('mainController', function ($scope, $w
         }
     };
 
-    $scope.saveTimeline = function () {
-        var timeline = timelineManager.getTimeline();
-        if (timeline) {
-            var accessToken = $scope.getAccessTokenFromUrl();
-            if (!accessToken) {
-                var url = dropboxManager.authenticate();
-                $window.location.href = url;
-            } else {
-                dropboxManager.setAccessToken(accessToken);
-                dropboxManager.uploadTimeline(timeline).then(function (result) {
-                    console.log(result);
-                });
-            }
-        }
-    };
-
     $scope.init = function () {
         var accessToken = $scope.getAccessTokenFromUrl();
         if (accessToken) {
             dropboxManager.setAccessToken(accessToken);
         }
-        timelineManager.retrieveTimeline().then(function (result) {
-            $scope.timelineData = result;
-        });
     };
 
     $scope.init();

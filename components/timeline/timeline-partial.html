@@ -13,6 +13,11 @@
                        ng-change="updateTimeline()"/>
             </div>
             <div>&nbsp;</div>
+            <div>
+                <button id="saveToDropbox" class="btn btn-danger" ng-click="saveTimelineToDropBox()"
+                        ng-show="isAuthenticated()">Save To Dropbox
+                </button>
+            </div>
         </form>
     </div>
     <div class="page-header">

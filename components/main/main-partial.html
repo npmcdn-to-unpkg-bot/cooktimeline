@@ -16,8 +16,12 @@
                     </div>
                 </div>
                 <div class="pull-right">
-                    <button id="loadFiles" class="btn btn-danger" ng-click="loadFiles()">Load File</button>
-                    <button id="loadFiles" class="btn btn-danger" ng-click="saveTimeline()">Save</button>
+                    <button id="logIntoDropbox" class="btn btn-danger" ng-click="authenticateWithDropbox()"
+                            ng-hide="isAuthenticated()">Log in to Dropbox
+                    </button>
+                    <button id="loadFiles" class="btn btn-danger" ng-click="loadFiles()" ng-show="isAuthenticated()">
+                        Load File from Dropbox
+                    </button>
                 </div>
                 <div>&nbsp;</div>
             </div>
