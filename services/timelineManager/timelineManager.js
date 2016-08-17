@@ -21,7 +21,7 @@ angular.module('cookTimeline').factory("timelineManager", function ($http, $q, l
             }, function (result) {
                 updateTimeline({});
                 return {};
-            })
+            });
         } else {
             return $q.when(data);
         }
