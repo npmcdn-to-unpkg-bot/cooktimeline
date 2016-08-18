@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         connect: {
             main: {
                 options: {
-                    port: 9000,
+                    port: 8000,
                     middleware: function (connect, options) {
                         // Same as in grunt-contrib-connect
                         var middlewares = [];
@@ -111,6 +111,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     { src: ['images/**'], dest: 'dist/' },
+                    {src: ['fonts/**'], dest: 'dist/'},
                     { src: ['bower_components/boostrap/dist/fonts/**'], dest: 'dist/' },
                     { src: ['audio/**'], dest: 'dist/' },
                     { src: ['data/**'], dest: 'dist/' }
