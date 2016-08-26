@@ -114,7 +114,8 @@ module.exports = function (grunt) {
                     {src: ['fonts/**'], dest: 'dist/'},
                     { src: ['bower_components/boostrap/dist/fonts/**'], dest: 'dist/' },
                     { src: ['audio/**'], dest: 'dist/' },
-                    { src: ['data/**'], dest: 'dist/' }
+                    { src: ['data/**'], dest: 'dist/' },
+                    { src: ['web-server.js'], dest: 'dist/' }
                 ]
             }
         },
@@ -190,9 +191,9 @@ module.exports = function (grunt) {
                         width: 80,
                         beautify: true
                     },
-                },
-                src: 'temp/app.full.js',
-                dest: 'dist/app.full.min.js'
+                    src: 'temp/app.full.js',
+                    dest: 'dist/app.full.min.js'
+                }
             }
         },
         htmlmin: {
