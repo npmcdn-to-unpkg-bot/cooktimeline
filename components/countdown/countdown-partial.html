@@ -1,0 +1,6 @@
+<div class="row well-lg" ng-controller="countdownController">
+    <div class="col-lg-6" ng-repeat="event in events">
+        <h3>{{event.Title}}</h3>
+        <div countdown-timer my-current-time="{{event}}"></div>
+    </div>
+</div>
