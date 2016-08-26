@@ -1,4 +1,4 @@
-angular.module('cookTimeline').controller('timelineController', function ($scope, $interval, $location, $window, timelineManager, dropboxManager) {
+angular.module('cookTimeline').controller('timelineController', function ($scope, $rootScope, $interval, $location, $window, timelineManager, dropboxManager) {
     $scope.timelineData = {};
     $scope.timedue = new moment();
     $scope.upcomingEvents = [];
@@ -86,12 +86,14 @@ angular.module('cookTimeline').controller('timelineController', function ($scope
         });
         $scope.timelineData.TimelineEvents = events;
         timelineManager.updateTimeline($scope.timelineData);
+        $rootScope.$broadcast('cooktimeline:updated');
     };
 
     $scope.saveNewEvent = function () {
         $scope.displayAddEvent = false;
         $scope.timelineData.TimelineEvents.push($scope.newItem);
         $scope.updateTimeline();
+        $rootScope.$broadcast('cooktimeline:updated');
     };
 
     $scope.editItem = function () {
