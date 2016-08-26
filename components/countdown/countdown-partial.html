@@ -1,7 +1,7 @@
 <div class="row" ng-controller="countdownController">
-    <div class="bg-info well-lg">
+    <div class="well-lg">
         <div class="col-lg-4" ng-repeat="event in events">
-            <h3>{{event.Title}}</h3>
+            <h3 class="timeline-title">{{event.Title}}</h3>
             <div countdown-timer my-current-time="{{event}}"></div>
         </div>
     </div>

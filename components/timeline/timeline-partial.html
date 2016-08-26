@@ -1,9 +1,9 @@
-<div class="container" ng-controller="timelineController">
+<div ng-controller="timelineController">
     <div class="bg-info well-lg">
-        <form class="form-horizontal">
+        <form class="form-horizontal" ng-show="displayEditFields">
             <div>&nbsp;</div>
             <div class="form-group">
-                <input class="form-control" id="timelineTitlw" class="input-lg" type="text"
+                <input class="form-control" id="timelineTitle" class="input-lg" type="text"
                        ng-model="timelineData.Title"
                        ng-change="updateTimeline()" ng-disabled="!displayEditFields"/>
             </div>
@@ -18,7 +18,16 @@
                         ng-show="isAuthenticated()">Save To Dropbox
                 </button>
             </div>
+            <div>
+                <span ng-click="editItem()"><i class="glyphicon glyphicon-edit"></i></span>
+            </div>
         </form>
+        <div ng-hide="displayEditFields">
+           <h3>{{timelineData.Title}} <span ng-click="editItem()"><i class="glyphicon glyphicon-edit"></i></span></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-include="'components/countdown/countdown-partial.html'"></div>
     </div>
     <div class="page-header">
         <div class="btn btn-lg btn-block" ng-class="soundIsPlaying()" ng-click="acknowledge()">Acknowledge</div>
