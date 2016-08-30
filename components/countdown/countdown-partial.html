@@ -1,8 +1,10 @@
 <div class="row" ng-controller="countdownController">
     <div class="well-lg">
-        <div class="col-lg-offset-4">
-            <h2 class="timeline-title">{{event.Title}}</h2>
-            <div countdown-timer my-current-time="event.TimeDue"></div>
+        <div class="centerClock">
+        	<div class="clock">
+	            <h2 class="timeline-title">{{event.Title}}</h2>
+	            <div countdown-timer my-current-time="event.TimeDue"></div>
+	        </div>
         </div>
     </div>
 </div>
